@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="API climática para consulta da temperatura nas principais capitais brasileiras: São Paulo, Rio de Janeiro, Curitiba...">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Clima Brasil">
+    <meta property="og:description" content="API climática para consulta da temperatura nas principais capitais brasileiras: São Paulo, Rio de Janeiro, Curitiba...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- JavaScript -->
+    <script src="js/script.js" defer></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Clima Brasil</title>
+</head>
+<body>
+    <header class="p-2 cor-fundo sombra">
+        <h1 class="h1 text-white text-center">Clima Brasil</h1>
+    </header>
+    
+    <main class="container mt-5 pt-5">
+        <div class="row flex-column align-items-center">
+            <form class="col-sm-6 col-9  mb-5 pb-5">
+                <div class="from-group">
+                    <select class="form-control sombra" name="cidades" id="cidades">
+                        <option value="padrao">Selecione o estado...</option>
+                        <option value="aracaju">Aracaju</option>
+                        <option value="belem">Belém</option>
+                        <option value="belo horizonte">Belo Horizonte</option>
+                        <option value="boa vista">Boa Vista</option>
+                        <option value="brasilia">Brasília</option>
+                        <option value="campo grande">Campo Grande</option>
+                        <option value="cuiaba">Cuiabá</option>
+                        <option value="curitiba">Curitiba</option>
+                        <option value="florianopolis">Florianópolis</option>
+                        <option value="fortaleza">Fortaleza</option>
+                        <option value="goiania">Goiânia</option>
+                        <option value="joao pessoa">João Pessoa</option>
+                        <option value="macapa">Macapá</option>
+                        <option value="maceio">Maceió</option>
+                        <option value="manaus">Manaus</option>
+                        <option value="natal">Natal</option>
+                        <option value="palmas">Palmas</option>
+                        <option value="porto alegre">Porto Alegre</option>
+                        <option value="porto velho">Porto Velho</option>
+                        <option value="recife">Recife</option>
+                        <option value="rio de janeiro">Rio de Janeiro</option>
+                        <option value="sao luis">São Luís</option>
+                        <option value="sao paulo">São Paulo</option>
+                        <option value="salvador">Salvador</option>
+                        <option value="teresina">Teresina</option>
+                        <option value="vitoria">Vitória</option>
+                    </select>
+                </div>
+            </form>
+
+            <div class="row col-12 align-items-end centralizar">
+                <div class="centralizar col-12" data-animacao="caixa">
+                    <span data-animacao="barrinha"></span>
+                    <span data-animacao="barrinha"></span>
+                    <span data-animacao="barrinha"></span>
+                    <span data-animacao="barrinha"></span>
+                    <span data-animacao="barrinha"></span>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 order-lg-0 order-2 mb-3 centralizar">
+                    <div class="rounded p-4 text-white text-center cor-fundo sombra" data-temperatura="card" data-prev="1">
+                        <span class="mb-2" data-temperatura="data"></span>
+                        <h2 class="h1 centralizar">
+                            <img src="img/icone-temp.svg" alt="Icone temp">
+                            <span data-temperatura="temp"></span>
+                        </h2>
+                        <span data-temperatura="vento"></span>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-9 col-12 order-lg-0 order-0 mb-3 centralizar ">
+                    <div class="rounded p-4 text-white text-center cor-fundo sombra" data-temperatura="card">
+                        <div class="centralizar sombra cor-fundo p-1" data-temperatura="clima">
+                            <img class="img-fluid" src="" alt="">
+                        </div>
+                        <span class="mb-2" data-temperatura="data"></span>
+                        <h1 class= "h1 centralizar" >
+                            <img src="img/icone-temp.svg" alt="Icone temp">
+                            <span data-temperatura="temp"></span>
+                        </h1>
+                        <span data-temperatura="descri"></span>
+                        <span data-temperatura="vento"></span>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-12 order-lg-0 order-1 mb-3 centralizar ">
+                    <div class="rounded p-4  text-white text-center cor-fundo sombra" data-temperatura="card" data-prev="0">
+                        <span class="my-lg-3 mb-2" data-temperatura="data"></span>
+                        <h2 class="h1 centralizar">
+                            <img src="img/icone-temp.svg" alt="Icone temperatura">
+                            <span data-temperatura="temp"></span>
+                        </h2>
+                        <span data-temperatura="vento"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div data-temperatura="erro">
+                <p class="col-10 text-center mx-auto alert alert-danger">Falha ao carregar os dados, podem não estar disponíveis no momento!</p>
+            </div>
+        </div>  
+    </main>
+
+    <footer class="cor-fundo text-white p-4 text-center">
+        <h1 class="h4 p-2 mb-5">Consumo de API - Senai Suíço-Brasileira</h1>
+        <div class="container">
+            <ul class=" row  centralizar list-unstyled m-0">
+                <li class="col-lg-4 col-6 py-2">
+                    <span class="contribuidores">Paulo Henrique</span>
+                    <a href="https://github.com/henrique1204" class="text-white" target="_blank">Henrique1204</a>
+                </li>
+                <li class="col-lg-4 col-6 py-2">
+                    <span class="contribuidores">Julia Ágatha</span>
+                    <a href="https://github.com/agatha-juh" class="text-white" target="_blank">agatha-juh</a>
+                </li>
+                <li class="col-lg-4 col-6 py-2">
+                    <span class="contribuidores">Nicolas Moura</span>
+                    <a href="https://github.com/nicoringa" class="text-white" target="_blank">nicoringa</a>
+                </li>
+                <li class="col-lg-4 col-6 py-2">
+                    <span class="contribuidores">Geovanna Caserta</span>
+                    <a href="https://github.com/gkslima" class="text-white" target="_blank">gkslima</a>
+                </li>
+                <li class="col-lg-4 col-6 py-2">
+                    <span class="contribuidores">Mauricio C.</span>
+                    <a href="https://github.com/mauricio383" class="text-white" target="_blank">mauricio383</a>
+                </li>
+                <li class="col-lg-4 col-6 py-2">
+                    <span class="contribuidores">Raquel Moreira</span>
+                    <a href="https://github.com/RachMor" class="text-white h6" target="_blank">RachMor</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

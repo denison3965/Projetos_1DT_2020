@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/inserir.css">
+    <!-- Scripts -->
+    <script type="module" src="js/script.js" defer></script>
+    <title>Animal Quest - Inserir Pergunta</title>
+</head>
+<body>
+    <header>
+        <h1>Inserir</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pesquisa.html">Pesquisa</a></li>
+                <li class="btn-sair"><button type="button" data-btn="sair">Sair</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="primeiros-passos">
+        <div class="titulo-container">
+            <h1>Primeiros Passos</h1>
+            <span class="ornamento"></span>
+        </div>
+        
+        <p>Faça login ou crie um novo cadastro para poder ter acesso ao formulário de inserção de perguntas.</p>
+        
+        <div class="botoes">
+            <button type="button" class="btn" data-btn="login">Login</button>
+            <button type="button" class="btn" data-btn="cadastro">Criar</button>
+        </div>
+    </section>
+    
+    <main class="inserir-pergunta">
+        <div class="titulo-container">
+            <h1>Formualário de Inserção</h1>
+            <span class="ornamento"></span>
+        </div>
+        
+        <form class="adicionar-pergunta">
+            <div class="campo">
+                <label for="pergunta">Pergunta</label>
+                <input type="text" name="pergunta" id="pergunta" required>
+            </div>
+            
+            <div class="campo campo-alternativas">
+                <label>Repostas</label>
+                <input type="text" name="a" id="a" placeholder="A" required>
+                <input type="text" name="b" id="b" placeholder="B" required>
+                <input type="text" name="c" id="c" placeholder="C" required>
+                <input type="text" name="d" id="d" placeholder="D" required>
+            </div>
+            
+            <div class="campo">
+                <label for="correta">Altenativa Correta</label>
+                <select name="correta" id="correta" required>
+                    <option value="">Seleciona a altenativa....</option>
+                    <option value="a">A</option>
+                    <option value="b">B</option>
+                    <option value="c">C</option>
+                    <option value="d">D</option>
+                </select>
+            </div>
+            
+            <button type="button" class="btn">Adicionar</button>
+        </form>
+    </main>
+    
+    <section class="modal-container" data-modalContainer="login">
+        <div class="modal" data-modal="login">
+            <button type="button" class="btn-fechar">
+                <img src="img/btn_fechar_branco.svg" alt="Fechar modal">
+            </button>
+            
+            <div class="titulo-container">
+                <h1>Login</h1>
+                <span class="ornamento"></span>
+            </div>
+            
+            <form id="login">
+                <div class="campo">
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" name="usuario" id="usuario">
+                </div>
+                
+                
+                <div class="campo">
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha"></input>
+                </div>
+                
+                <small class="erro-login">O usuário ou senha digitado está incorreto, tente novamente.</small>
+                
+                <button type="button">Finalizar</button>
+            </form>
+        </div>
+    </section>
+    
+    <section class="modal-container" data-modalContainer="cadastro">
+        <div class="modal" data-modal="cadastro">
+            <button type="button" class="btn-fechar">
+                <img src="img/btn_fechar_branco.svg" alt="Fechar modal">
+            </button>
+            
+            <div class="titulo-container">
+                <h1>Cadastro</h1>
+                <span class="ornamento"></span>
+            </div>
+            
+            <form id="cadastro">
+                <div class="campo">
+                    <label for="cad_usuario">Usuário:</label>
+                    <input type="text" name="usuario" id="cad_usuario">
+                </div>
+                
+                
+                <div class="campo">
+                    <label for="cad_senha">Senha:</label>
+                    <input type="password" name="senha" id="cad_senha"></input>
+                </div>
+                
+                <button type="button">Finalizar</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="modal-container" data-modalContainer="sair">
+        <div class="modal" data-modal="sair">
+            <button type="button" class="btn-fechar">
+                <img src="img/btn_fechar_branco.svg" alt="Fechar modal">
+            </button>
+            
+            <div class="titulo-container">
+                <h1>Sair</h1>
+                <span class="ornamento"></span>
+            </div>
+            
+            <p>Tem certeza que deseja deslogar do site?</p>
+            
+            <div class="opcoes">
+                <button type="button" id="sim">Sim</button>
+                <button type="button" id="nao">Não</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="titulo-container">
+            <h1>Animal Quest - SENAI Suíço Brasileira</h1>
+            <span class="ornamento"></span>
+        </div>
+        
+        <ul>
+            <li><span>Paulo Henrique</span> <a href="https://github.com/henrique1204"><span>Henrique1204</span></a></li>
+            <li><span>Mauricio Calassara</span> <a href="https://github.com/mauricio383"><span>Mauricio383</span></a></li>
+            <li><span>Nicollas Alves</span> <a href="https://github.com/SuperNicolau123"><span>SuperNicolau123</span></a></li>
+            <li><span>João Vitor</span> <a href="https://github.com/Thekid666"><span>Thekid666</span></a></li>
+            <li><span>João Vinicius</span> <a href=""><span></span></a></li>
+            <li><span>Luiz Paulo</span> <a href="https://github.com/Luiz-Oliveiralab"><span>Luiz-Oliveiralab</span></a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Le Rest - Adicione pratos, atualize os já existentes e removas os indesejados.">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Le Rest | Uma API de cardápio."/>
+    <meta property="og:description" content="Le Rest - Adicione pratos, atualize os já existentes e removas os indesejados."/>
+    <meta property="og:url" content="https://le-rest.com"/>
+    <meta property="og:image" content="https://le-rest.com/img/og-le-rest.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <!-- JavaScript -->
+    <script src="main.js" defer></script>
+    <title>Le Rest | Uma API de cardápio.</title>
+</head>
+<body>
+    <header>
+        <h1>Le Rest</h1>
+    </header>
+    
+    <section class="login">
+        <div class="container-titulo">
+            <h1>Login</h1>
+            <span>§</span>
+        </div>
+
+        <p>Para visualizar os pratos existentes, atualiza-los e modifica-los ou até mesmo inserir um novo prato, faça login utilizando o nome de usuário e a sua respectiva senha </p>
+
+        <button type="button" data-btn="login">fazer login</button>
+    </section>
+    
+    <main class="carregando">
+        <div class="container-titulo">
+            <h1>Bem vindo ao nosso cardápio</h1>
+            <span>§</span>
+        </div>
+        
+        <div class="carregar">
+            <img src="img/prato.svg" alt="Carregando">
+        </div>
+        
+        <button type="button" class="icon-container" data-btn="adicionar">
+            <img src="img/icon_add.svg" alt="Adicionar novo item">
+        </button>
+        
+        <div class="container-card"></div>
+    </main>
+    
+    <section class="modal-container" data-modalContainer="login">
+        <div class="modal" data-modal="login">
+            <button type="button" class="btn-fechar">
+                <img src="img/icon_fechar_azul.svg" alt="Fechar modal">
+            </button>
+            
+            <div class="container-titulo">
+                <h1>Login</h1>
+                <span>§</span>
+            </div>
+            
+            <form id="login">
+                <div class="campo">
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" name="usuario" id="usuario">
+                </div>
+                
+                
+                <div class="campo">
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" autocomplete="on"></input>
+                </div>
+                
+                <small class="erro-login">O usuário ou senha digitado está incorreto, tente novamente.</small>
+
+                <button type="button">Finalizar</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="modal-container" data-modalContainer="adicionar">
+        <div class="modal" data-modal="adicionar">
+            <button type="button" class="btn-fechar">
+                <img src="img/icon_fechar_azul.svg" alt="Fechar modal">
+            </button>
+            
+            <div class="container-titulo">
+                <h1>Adicionar</h1>
+                <span>§</span>
+            </div>
+            
+            <form id="adicionar_item">
+                <div class="campo">
+                    <label for="nome_add">Nome:</label>
+                    <input type="text" name="nome" id="nome_add">
+                </div>
+                
+                <div class="campo">
+                    <select name="categoria" id="categoria_add">
+                        <option value="">Selecione a categoria...</option>
+                        <option value="massas">Massas</option>
+                        <option value="sobremesas">Sobremesas</option>
+                        <option value="carnes">Carnes</option>
+                    </select>
+                </div>
+                
+                <div class="campo">
+                    <label for="descricao_add">Descrição</label>
+                    <textarea name="descricao" id="descricao_add" cols="30" rows="10"></textarea>
+                </div>
+                
+                <button type="button">Finalizar</button>
+            </form>
+        </div>
+    </section>
+    
+    <section class="modal-container" data-modalContainer="atualizar">
+        <div class="modal" data-modal="atualizar">
+            <button type="button" class="btn-fechar">
+                <img src="img/icon_fechar_branco.svg" alt="Fechar modal">
+            </button>
+            
+            <div class="container-titulo">
+                <h1>Atualizar</h1>
+                <span>§</span>
+            </div>
+            
+            <form id="atualizar_item">
+                <div class="campo">
+                    <label for="nome_att">Nome:</label>
+                    <input type="text" name="nome" id="nome_att">
+                </div>
+                
+                <div class="campo">
+                    <select name="categoria" id="categoria_att">
+                        <option value="">Selecione a categoria...</option>
+                        <option value="massas">Massas</option>
+                        <option value="sobremesas">Sobremesas</option>
+                        <option value="carnes">Carnes</option>
+                    </select>
+                </div>
+                
+                <div class="campo">
+                    <label for="descricao_att">Descrição</label>
+                    <textarea name="descricao" id="descricao_att" cols="30" rows="10"></textarea>
+                </div>
+                
+                <!-- Mesma burrada do botão, viu como sujou a url? -->
+                <button type="button">Finalizar</button>
+            </form>
+        </div>
+    </section>
+    
+    <section class="modal-container" data-modalContainer="deletar">
+        <div class="modal" data-modal="deletar">
+            <button type="button" class="btn-fechar">
+                <img src="img/icon_fechar_branco.svg" alt="Fechar modal">
+            </button>
+            
+            <div class="container-titulo">
+                <h1>Deletar</h1>
+                <span>§</span>
+            </div>
+            
+            <p>Tem certeza que deseja deletar esse item?</p>
+            
+            <div class="opcoes">
+                <button type="button" id="sim">Sim</button>
+                <button type="button" id="nao">Não</button>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container-titulo">
+            <h1>Criação API - SENAI Suiço Brasileira</h1>
+            <span>§</span>
+        </div>
+        
+        <ul class="container">
+            <li>
+                <h2>Geovanna Caserta</h2>
+                <span>§</span>
+                <a href="https://github.com/gkslima" class="text-white" target="_blank">
+                    <img src="img/icone-github.svg" alt="gkslima">
+                </a>
+            </li>
+            <li>
+                <h2>Julia Ágatha</h2>
+                <span>§</span>
+                <a href="https://github.com/agatha-juh" class="text-white" target="_blank">
+                    <img src="img/icone-github.svg" alt="agatha-juh">
+                </a>
+            </li>
+            <li>
+                <h2>Mauricio Calassara</h2>
+                <span>§</span>
+                <a href="https://github.com/mauricio383" class="text-white" target="_blank">
+                    <img src="img/icone-github.svg" alt="mauricio383">
+                </a>
+            </li>
+            <li>
+                <h2>Nicolas Moura</h2>
+                <span>§</span>
+                <a href="https://github.com/nicoringa" class="text-white" target="_blank">
+                    <img src="img/icone-github.svg" alt="nicoringa">
+                </a>
+            </li>
+            <li>
+                <h2>Paulo Henrique</h2>
+                <span>§</span>
+                <a href="https://github.com/henrique1204" class="text-white" target="_blank">
+                    <img src="img/icone-github.svg" alt="Henrique1204">
+                </a>
+            </li>
+            <li>
+                <h2>Raquel Moreira</h2>
+                <span>§</span>
+                <a href="https://github.com/RachMor" class="text-white h6" target="_blank">
+                    <img src="img/icone-github.svg" alt="RachMor">
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

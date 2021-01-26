@@ -1,0 +1,84 @@
+/* Font Spectral Bold 700 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Spectral+SC:wght@400;600&display=swap');
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: inherit;
+    color: inherit;
+}
+
+html {
+    --fonte-principal: 'Spectral SC', serif;
+    --fonte-secundaria: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0px;
+    font-family: var(--fonte-secundaria);
+    color: #222;
+    background-color: #F4F4F4;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Classes padrões */
+main {
+    min-height: calc(100vh - 15rem);
+}
+
+.container {
+    width: 100%;
+    padding: 1rem 4rem;
+}
+
+@media (max-width: 50rem) {
+    .container {
+        padding: 2rem 1rem;
+    }
+}
+
+.titulo {
+    font-family: var(--fonte-principal);
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.titulo::after {
+    content: "";
+    width: 40px;
+    height: 1.5px;
+    background-color: currentColor;
+    display: block;
+}
+
+.animarEntrada {
+    opacity: 0;
+    transform: translateY(-3rem);
+    animation: animarEntrada 0.4s forwards;
+}
+
+@keyframes animarEntrada {
+    to {
+        opacity: 1;
+        transform: initial;
+    }
+}

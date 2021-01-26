@@ -1,0 +1,26 @@
+.btn {
+    width: 40px;
+    height: 8px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(90deg, #A9D7F1, #6a9bb8);
+    display: block;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.btn + .btn {
+    margin-left: 1rem;
+}
+
+.btn.ativo, .btn:hover, .btn:focus {
+    background-image: linear-gradient(90deg, #164673, #0a2549);
+}
+
+@media (max-width: 50rem) {
+    .btn {
+        height: 40px;
+        border-radius: 50%;
+    }
+}

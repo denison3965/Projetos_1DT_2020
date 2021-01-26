@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.container h1 {
+    width: 100%;
+}
+
+.filtro {
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+}
+
+.filtro select {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #F4F4F4;
+    background-color: #164673;
+    cursor: pointer;
+}
+
+@media (max-width: 50rem) {
+    .container {
+        justify-content: center;
+    }
+
+    .filtro {
+        justify-content: center;
+    }
+}

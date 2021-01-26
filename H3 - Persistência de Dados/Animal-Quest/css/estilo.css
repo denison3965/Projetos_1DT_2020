@@ -1,0 +1,222 @@
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+body, div, section, main, header, footer, p, ul, h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    font-size: 1em;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    color: #4A4A4A;
+    background: #E4E4E4 url('../img/fundo_banner.svg') repeat top center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header */
+header, footer {
+    padding: 30px 0 20px;
+    color: #F8F8F8;
+    background-color: #004E2D;
+}
+
+header h1 {
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+header img {
+    height: 48px;
+}
+
+header nav {
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav li + li{
+    margin-left: 20px;
+}
+
+header nav a, header nav button {
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: inherit;
+    background: none;
+    display: block;
+    cursor: pointer;
+    outline: none;
+}
+
+header nav a:hover, header nav button:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer ul {
+    max-width: 960px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 20px;
+}
+
+footer li a {
+    padding: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+footer li a:hover {
+    text-decoration: underline;
+}
+
+footer li > span::after {
+    content: "|";
+    margin-left: 8px;
+    display: inline;
+}
+
+@media only screen and (max-width: 979px) {
+    footer ul {
+        max-width: 700px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer li a {
+        padding: 15px 8px;
+    }
+
+    footer li > span::after {
+        content: "";
+        width: 80px;
+        height: 2px;
+        background-color: currentColor;
+        margin: 15px auto 0;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 739px) {
+    footer ul {
+        max-width: 300px;
+        grid-template-columns: 1fr;
+        gap: 30px 20px
+    }
+}
+
+/* Titulo e Ornamento */
+.titulo-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.titulo-container h1, .titulo-container h2 {
+    margin-bottom: 22px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.titulo-container .ornamento {
+    width: 50px;
+    height: 2px;
+    margin: 12px auto;
+    background-color: currentColor;
+    display: block;
+    box-shadow: 25px 0 0 0 currentColor,
+    -25px 0 0 0 currentColor,
+    0 5px 0 0 rgba(0, 0, 0, 0),
+    0 7px 0 0 currentColor,
+    0 -5px 0 0 rgba(0, 0, 0, 0),
+    0 -7px 0 0 currentColor;
+}
+
+@media only screen and (max-width: 739px) {
+    .titulo-container {
+        max-width: 300px;
+    }
+
+    .titulo-container h1 {
+        font-size: 20px;
+    }
+}
+
+/* Botões */
+.btn {
+    width: 160px;
+    padding: 10px 0;
+    border: 2px solid;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #F8F8F8;
+    background-color: #004E2D;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    color: #004E2D;
+    background-color: #F8F8F8;
+}
+
+/* Animações */
+@keyframes descer {
+    from {
+        transform: translate3d(0, -100px, 0);
+        opacity: 0;
+    } to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}

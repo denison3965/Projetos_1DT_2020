@@ -1,0 +1,175 @@
+.quente {
+    background-image: linear-gradient(#F02, #F62);
+}
+
+.frio {
+    background-image: linear-gradient(#26F, #00FFDD);
+}
+
+.cor-fundo {
+    background-color: rgba(42, 42, 42, 0.6);
+}
+
+.sombra {
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #223;
+}
+
+header h1 {
+    text-transform: capitalize;
+}
+
+main {
+    min-height: 600px;
+}
+
+[data-temperatura="card"] {
+    width: 280px;
+    border: 2px solid;
+    display: none;
+    position: relative;
+}
+
+@keyframes descer {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+[data-temperatura="card"].ativo {
+    display: block;
+    animation: descer 0.5s ease forwards;
+}
+
+[data-temperatura="temp"] {
+    margin-left: 20px;
+}
+
+[data-temperatura="card"] > span {
+    font-size: 24px;
+    display: block;
+}
+
+[data-temperatura="vento"]::before, [data-temperatura="descri"]::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    margin: 32px auto;
+    background-color: currentColor;
+    display: block;
+}
+
+[data-temperatura="clima"] {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
+
+[data-animacao="caixa"] {
+    display: none;
+}
+
+[data-animacao="caixa"].ativo {
+    display: flex;
+}
+
+[data-animacao="barrinha"] {
+    width: 10px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    animation: carregar 0.5s infinite;
+}
+
+@keyframes carregar {
+    from {
+        transform: scale3d(1, 3, 1);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+[data-animacao="caixa"] > [data-animacao="barrinha"]:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+[data-animacao="caixa"] > [data-animacao="barrinha"]:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+[data-animacao="caixa"] > [data-animacao="barrinha"]:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+[data-animacao="caixa"] > [data-animacao="barrinha"]:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+[data-animacao="barrinha"] + [data-animacao="barrinha"] {
+    margin-left: 20px;
+}
+
+
+
+[data-temperatura="erro"]{
+    display:none;
+}
+
+[data-temperatura="erro"].ativo {
+    display: block;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer li span {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media (max-width: 576px) {
+    footer li span {
+        font-size: 16px;
+    }
+}
+
+footer li a::before {
+    content: "/";
+    margin: 0 10px 3px 5px;
+    display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+    footer li a::before {
+        content: "";
+        width: 70px;
+        height: 2px;
+        margin: 16px auto;
+        background-color: currentColor;
+        display: block;
+    }
+}
