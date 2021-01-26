@@ -1,0 +1,73 @@
+.My_Body {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #08A689 0%, rgba(255, 255, 255, 0) 100%), #03AAB3;
+}
+
+.Container {
+    background: #FAFAFA;
+    box-shadow: #526e6d 3px 3px 10px;
+    width: 80%;
+    min-height: 80%;
+    border-radius: 10px;
+    margin: 80px 100px 80px 100px;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+h5 {
+    margin: 50px 0px 50px 40px;
+}
+
+p{
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.Question {
+    background: #DEDEDE;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 25px 30px 25px 70px;
+    max-width: 90%;
+    box-shadow: #BEBEBE 3px 3px 8px;
+}
+
+.form-check-input {
+    background-color: #DADADA;
+}
+
+.button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    color: #FAFAFA;
+    background: #08A689;
+    box-shadow: #aeaeae 3px 3px 8px;
+}
+
+.btn:hover{
+    color: #FAFAFA;
+    background: #37848C;
+}
+.voltar{
+    background:    #37848c;
+    border-radius: 12px;
+    width:         160px;
+    height:        50px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 26px/50px "Ubuntu", sans-serif;
+    text-align:    center;
+  }

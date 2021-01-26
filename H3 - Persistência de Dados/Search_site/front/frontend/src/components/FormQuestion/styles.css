@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab&display=swap');
+.titulo--pesquisa, .adicionar--pergunta{
+    font-weight: 100;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    width: 51vw;
+    margin-left: 13px;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+.titulo{
+    font-weight: 100;
+    padding: .200rem .95rem; 
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    background-color: #4950571e;
+}
+.titulo:hover{
+    border: 1px solid #F29A2E; 
+}
+.respostas{
+    font-weight: 100;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.resposta--a,
+.resposta--b,
+.resposta--c,
+.resposta--d{
+    font-weight: 100;
+    background-color: #4950571e;
+    position: relative;
+    display: block;
+    margin-top: 5px;
+    padding: .200rem .95rem; 
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    width: 50vw;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.resposta--a:hover,
+.resposta--b:hover,
+.resposta--c:hover,
+.resposta--d:hover{
+    border: 1px solid #F29A2E;
+}
+.respota--correta{
+    font-weight: 100;
+   margin-top: 40px;
+   margin-bottom: 40px;
+   font-size: 20px;
+}
+.selecao {
+    font-weight: 100;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    display: inline-block;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .175rem 1.75rem .175rem .75rem;
+    line-height: 1.5;
+    vertical-align: middle;
+    background: #fff;
+    border-radius: .25rem;
+    appearance: none;
+    word-wrap: normal;
+    overflow-wrap: normal;
+    text-transform: none;
+    font-family: inherit;
+    border: 1px solid #ced4da;
+    margin-right: .5rem !important;
+    margin-top: .25rem !important;
+    margin-bottom: .25rem !important;
+    background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right .75rem center/8px 10px;
+    background-color: rgb(255, 255, 255);
+    background-position-x: right 0.75rem;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+    background-origin: padding-box;
+}
+.selecao:hover{
+    border: 1px solid #F29A2E; 
+}
+.feedback{
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.area--texto{
+    font-weight: 100;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: #4950571e;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.area--texto:hover{
+    border: 1px solid #F29A2E; 
+}
+.line-under-title{
+    height:2px;
+    width:15px;
+    background-color:#F29A2E;
+    margin-bottom: 5px;
+    margin-left: -10px;
+}

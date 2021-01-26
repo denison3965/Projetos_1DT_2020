@@ -1,0 +1,76 @@
+.fundo-verde {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #08A689 0%, rgba(255, 255, 255, 0) 100%),
+    linear-gradient(0deg, #03AAB3, #03AAB3);
+}
+
+.container-branco {
+    display: flex;
+    background-color: #ffffff;
+    width: 80%;
+    min-height: 900px;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+.container-branco h1{
+    display: flex;
+    color: #000000;
+    font-size: 30px;
+    line-height: 30px;
+    margin: auto;
+    margin-top: 20px;
+    flex: 1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.area-cards {
+    display: flex;
+    flex: 8;
+    margin-left: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    max-height: 600px;
+    margin: 0px 5px 0px 10px;
+    
+}
+.cardword, p, h5{
+    text-align: center;
+}
+
+h5{
+    margin: 50px 0px 0px 0px;
+}
+.btn--responder{
+    background:    linear-gradient(#08A689, #37848C);
+    border-radius: 10px;
+    padding:       8px 15px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 25px/1 "Noto Sans", sans-serif;
+    text-align:    center;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .card-text{
+      font-weight: 100;
+  }
+  .voltar{
+    margin: 5px;
+    background:    #37848c;
+    border-radius: 12px;
+    width:         160px;
+    height:        50px;
+    color:         #ffffff;
+    display:       inline-block;
+    font:          normal bold 26px/50px "Ubuntu", sans-serif;
+    text-align:    center;
+  }
