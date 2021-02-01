@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Tela de login</title>
+
+    <style>
+      .container--aplication{
+        display: flex;
+        height: 100vh;
+      }
+      .container--img{
+        width: 60%;
+        /*https://www.designergraficopacks.com/wp-content/uploads/2020/01/a%CC%81rvores-em-preto-e-branco-1.jpg*/
+        background-image: url(https://www.designergraficopacks.com/wp-content/uploads/2020/01/a%CC%81rvores-em-preto-e-branco-1.jpg);
+        background-position: center;
+        background-size: center;
+        margin-right:-100px;
+      }
+      .container--login{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        background-color: #f2f2f2;
+        -webkit-border-top-left-radius: 100px;
+        -webkit-border-bottom-left-radius: 100px;
+        -moz-border-radius-topleft: 100px;
+        -moz-border-radius-bottomleft: 100px;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+        border-left: 15px solid #ff0000bb;
+      }
+      .login--inter{
+        width: 350px;
+      }
+      @media only screen and (max-width: 1000px){
+        .container--img{
+          width: 100%;
+        }
+        .container--login{
+          position: absolute;
+          -webkit-border-top-left-radius: 0px;
+        -webkit-border-bottom-left-radius: 0px;
+        -moz-border-radius-topleft: 0px;
+        -moz-border-radius-bottomleft: 0px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        padding: 50px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50px;
+        }
+      }
+      @media only screen and (max-width: 700px){
+        .container--login{
+          width: 80%;
+          border-radius: 50px;
+          padding: 25px;
+        }
+      }
+
+    </style>
+</head>
+<body>
+
+  <div class="container--aplication" >
+
+    <div class="container--img">
+
+    </div>
+    
+    <div class="container--login">
+
+        <div class="login--inter" style="margin:auto">
+
+          <form action="/verificador" method="POST">
+              <h1>Login: </h1>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email:</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
+      
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Senha:</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="senha" required>
+              </div>
+      
+              <button type="submit" class="btn btn-danger">Entrar</button>
+
+              <a href="http://localhost:8080/formulario_de_cadastro"><button type="button" class="btn btn-dark">Casdastrar</button></a>
+            </form>
+            
+      </div>
+    </div>
+
+  </div>
+
+
+
+    
+</body>
+</html>
